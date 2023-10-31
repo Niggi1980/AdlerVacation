@@ -7,7 +7,13 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>Ein Adler der versucht hat zu fliegen, hast du versucht einzusperrt</div>
+    <div>
+      <div>machdasdieapp/soklappt/wieichesswill.exe</div>
+      <div>Nick ist schlau</div>
+    </div>
+
+    
+    
   )
 }
 
