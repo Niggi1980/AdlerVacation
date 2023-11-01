@@ -6,21 +6,22 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const zahl = useRef(5);
-
-  function setZahl() {
-    return <h1>{zahl.current}</h1>
-  }
-  
   useEffect(()=>{
     console.log("Run")
   },[])
 
-  return (
-    <div>
-      <h1>doof counter: {count}</h1>
-      <button onClick={() => setCount(count + 1)}>+</button>
-    </div>
+//Testfunktion
+function testButton () {      
+  console.log(`hello test`)
+}
 
+  return (
+
+    <div>
+      <button onClick={testButton}>test</button>
+      <p></p>
+      <button onClick={testButton}>+</button>
+    </div>
   )
 }
 
