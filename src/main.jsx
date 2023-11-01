@@ -6,9 +6,8 @@ import TestComp from './components/TestComp.jsx'
 import PopupComp from './components/PopupComp.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
-    <TestComp/>
-    <PopupComp></PopupComp>
-  </>
+  <div>
+    <App></App>
+  </div>
 
 )
