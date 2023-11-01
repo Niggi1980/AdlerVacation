@@ -13,8 +13,8 @@ export default function homepage() {
   }
 
   function addVacation(name){
-    if(isNaN(name)){return}
-    
+    if(!name){return}
+
     setButtons([...buttons, name])
     toggleAdd()
   }
