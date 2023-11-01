@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <h1>doof counter: {count}</h1>
-      <button onClick={() => setCount(count + 1)}>Click Me</button>
+      <button onClick={() => setCount(count + 1)}>+</button>
     </div>
 
   )
