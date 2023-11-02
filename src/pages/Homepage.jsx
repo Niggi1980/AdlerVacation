@@ -29,7 +29,7 @@ export default function homepage({trips, setTrips}) {
     <div className='homepageContainer'>
       <h1 style={{marginBottom:"40px"}}>Adler Vacation</h1>
       {trips.map((trip, index)=>(
-        <BigHolder key={index} headline={trip.name}></BigHolder>
+        <BigHolder key={index} headline={trip.name} urlPath={trip.name}></BigHolder>
       ))}
       {showPopup && (<Popup handleFunction={addVacation} placeholder="Destination..."></Popup>)}
 

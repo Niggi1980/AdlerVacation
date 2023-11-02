@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import AddButton from '../components/AddButton';
 import Popup from '../components/Popup';
 import BigHolder from '../components/BigHolder';
+import deletePic from "../assets/delete.png"
 
 
 export default function VacationReuseable({ name, vacation, trips, setTrips, index }) {
@@ -13,6 +14,13 @@ export default function VacationReuseable({ name, vacation, trips, setTrips, ind
 
     function toggleAddContainer(){
       setShowPopup(!showPopup)
+    }
+
+    function deleteTrip(){
+      const updatedTrips= [...trips]
+
+      updatedTrips.splice(index, 1)
+      setTrips(updatedTrips)
     }
   
     function addVacationDay(newDay) {
@@ -35,14 +43,20 @@ export default function VacationReuseable({ name, vacation, trips, setTrips, ind
     <div className='mainContainer'>
       <div className='imageContainer' onClick={()=>navigate(`/`)}>
         <img className='backButton' src={backImageButton} alt='Back Button' />
+
+          <div onClick={()=>{deleteTrip()}} className="deleteContainer">
+          <img className='backButton' src={deletePic} alt="" />
+        </div>
+
       </div>
+      
       <div className='textContainer'>
         <h1 className='headline'>{name}</h1>
       </div>
       {showPopup && (<Popup handleFunction={addVacationDay} placeholder="Schniedel"></Popup>)}
 
       {vacation.days.map((day, index)=>(
-        <BigHolder key={index} headline={day.name}></BigHolder>
+        <BigHolder key={index} headline={day.name} urlPath={`${vacation.name}/${day.name}`}></BigHolder>
       ))}
 
       <AddButton handleFunction={toggleAddContainer}></AddButton>
