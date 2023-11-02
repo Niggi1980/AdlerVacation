@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #ffc1c1 !important;
+  margin-top: 36px;
 }
 
 .imageContainer {

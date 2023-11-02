@@ -1,16 +1,16 @@
 
 
 .mainholder{
-    width: 80%;
-    height: 70px;
-    background-color: white;
-    border-radius: 20px;
-    margin: 10px;
+    width: 80% !important;
+    height: 70px !important;
+    background-color: white !important;
+    border-radius: 20px !important;
+    margin: 10px !important;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .containerHeadline{

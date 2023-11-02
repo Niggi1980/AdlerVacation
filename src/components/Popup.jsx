@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../css/popup.css"
+import FloatingInput from './FloatingInput';
+import PopUpModal from './popUpModal';
 
-export default function Popup({handleFunction, placeholder}) {
-    const [vacationName, setVacationName]= useState();
+export default function Popup({ handleFunction, placeholder }) {
+  const [vacationName, setVacationName] = useState();
+
+  function handleInput(event){
+    setVacationName(event.target.value)
+  }
 
 
   return (
     <div className='popupCustom'>
-        <input onChange={(event)=>{setVacationName(event.target.value)}} className='popupInput' type="text" placeholder={placeholder} />
-        <button onClick={()=>handleFunction(vacationName)} className='popupAddButton'>Add</button>
+
+      <FloatingInput inputFunction={handleInput}  className="" placeholder={placeholder}></FloatingInput>
+      
+      <button onClick={() => handleFunction(vacationName)} type="button" className="btn btn-primary mt-3 customAddButton">Hinzufügen</button>
     </div>
   )
 }

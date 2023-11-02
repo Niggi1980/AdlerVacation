@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import BigHolder from '../components/BigHolder'
 import "../css/homepage.css"
-import AddButton from '../components/AddButton';
 import Popup from '../components/Popup';
+import PopUpModal from '../components/popUpModal';
+import ModalAddButton from '../components/ModalAddButton';
 
 export default function homepage({trips, setTrips}) {
   const [showPopup, setShowPopup] = useState(false);
@@ -27,15 +28,13 @@ export default function homepage({trips, setTrips}) {
 
   return (
     <div className='homepageContainer'>
-      <h1 style={{marginBottom:"40px"}}>Adler Vacation</h1>
+      <h1 style={{marginBottom:"40px", fontWeight:"700"}}>Adler Vacation</h1>
       {trips.map((trip, index)=>(
         <BigHolder key={index} headline={trip.name} urlPath={trip.name}></BigHolder>
       ))}
-      {showPopup && (<Popup handleFunction={addVacation} placeholder="Destination..."></Popup>)}
+    
+      <ModalAddButton title="Put in Destination" handleFunction={addVacation} placeholder={"Destination"}></ModalAddButton>
 
-      <AddButton handleFunction={toggleAddContainer}></AddButton>
-
-      
     </div>
   )
 }

@@ -1,11 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
 
-  color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffc1c1;
+  color-scheme: light dark !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  background-color: #ffc1c1 !important;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,5 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
 
 
