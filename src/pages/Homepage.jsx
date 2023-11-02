@@ -25,7 +25,7 @@ export default function homepage({buttons, setButtons}) {
       {buttons.map((button, index)=>(
         <BigHolder key={index} headline={button}></BigHolder>
       ))}
-      {showPopup && (<Popup handleFunction={addVacation}></Popup>)}
+      {showPopup && (<Popup handleFunction={addVacation} placeholder="Destination..."></Popup>)}
 
       <AddButton handleFunction={toggleAddContainer}></AddButton>
 

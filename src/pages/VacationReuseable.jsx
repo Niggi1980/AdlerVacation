@@ -29,7 +29,7 @@ export default function VacationReuseable({ name }) {
       <div className='textContainer'>
         <h1 className='headline'>{name}</h1>
       </div>
-      {showPopup && (<Popup handleFunction={addVacation}></Popup>)}
+      {showPopup && (<Popup handleFunction={addVacation} placeholder="Schniedel"></Popup>)}
       <AddButton handleFunction={toggleAddContainer}></AddButton>
     </div>
   );
