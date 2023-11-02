@@ -11,19 +11,27 @@ export default function homepage({buttons, setButtons}) {
     setShowPopup(!showPopup)
   }
 
-  function addVacation(name){
-    if(!name){return}
-
-    setButtons([...buttons, name])
-    toggleAddContainer()
+  function addVacation(name) {
+    if (!name) {
+      return;
+    }
+  
+    const newTrip = {
+      name: name,
+      days: [],
+    };
+  
+    setTrips([...buttons, newTrip]);
+    toggleAddContainer();
   }
+  
 
 
   return (
     <div className='homepageContainer'>
       <h1 style={{marginBottom:"40px"}}>Adler Vacation</h1>
       {buttons.map((button, index)=>(
-        <BigHolder key={index} headline={button}></BigHolder>
+        <BigHolder key={index} headline={button.name}></BigHolder>
       ))}
       {showPopup && (<Popup handleFunction={addVacation} placeholder="Destination..."></Popup>)}
 

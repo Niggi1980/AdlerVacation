@@ -20,7 +20,7 @@ export default function VacationReuseable({ name }) {
       setButtons([...buttons, name])
       toggleAddContainer()
     }
-
+  
   return (
     <div className='mainContainer'>
       <div className='imageContainer' onClick={()=>navigate(`/`)}>
