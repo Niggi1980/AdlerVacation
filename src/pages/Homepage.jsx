@@ -21,7 +21,6 @@ export default function homepage({trips, setTrips}) {
       days: [],
     };
   
-    console.log(trips)
     setTrips([...trips, newTrip]);
     toggleAddContainer();
   }
