@@ -1,28 +1,21 @@
-.headline {
-    color: white;
-    font-weight: 600;
-    margin: 0;
-    text-align: center; /* Center the text */
-  }
-  
-  .mainContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .imageContainer {
-    margin-right: 20px; /* Adjust the value as needed to separate the button from the text */
-  }
-  
-  .backButton {
-    /* You can adjust the button's styling here */
-  }
-  
-  /* Optional: If you want to center the text vertically within textContainer */
-  .textContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  
-  
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 35px;
+  left: 0;
+}
+
+.textContainer{
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+
+.backButton{
+  width: 35px;
+  height: 35px;
+}
