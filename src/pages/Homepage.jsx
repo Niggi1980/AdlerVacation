@@ -4,7 +4,7 @@ import "../css/homepage.css"
 import AddButton from '../components/AddButton';
 import Popup from '../components/Popup';
 
-export default function homepage({buttons, setButtons}) {
+export default function homepage({trips, setTrips}) {
   const [showPopup, setShowPopup] = useState(false);
 
   function toggleAddContainer(){
@@ -17,21 +17,20 @@ export default function homepage({buttons, setButtons}) {
     }
   
     const newTrip = {
-      name: name,
+      name: name, 
       days: [],
     };
   
-    setTrips([...buttons, newTrip]);
+    console.log(trips)
+    setTrips([...trips, newTrip]);
     toggleAddContainer();
   }
-  
-
 
   return (
     <div className='homepageContainer'>
       <h1 style={{marginBottom:"40px"}}>Adler Vacation</h1>
-      {buttons.map((button, index)=>(
-        <BigHolder key={index} headline={button.name}></BigHolder>
+      {trips.map((trip, index)=>(
+        <BigHolder key={index} headline={trip.name}></BigHolder>
       ))}
       {showPopup && (<Popup handleFunction={addVacation} placeholder="Destination..."></Popup>)}
 

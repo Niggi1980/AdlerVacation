@@ -6,30 +6,30 @@ import Homepage from './pages/homepage'
 import VacationReuseable from './pages/VacationReuseable';
 
 function App() {
-  const [trips, setTrips] = useState([{
-    name: 'Japan', // Trip name
-    days: [
-      // Array of days, each containing activities
-      {
-        name: 'Day 1', // Day name
-        activities: ["Schniedel, Lümmel"],
-      },
-    ],
-  }]);
-  
-  
+  const [trips, setTrips] = useState([]);
+
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Homepage buttons={trips} setButtons={setTrips}></Homepage>}></Route>  
+        <Route index element={<Homepage trips={trips} setTrips={setTrips}></Homepage>}></Route>
 
-        {trips.map((button, index)=>(
-          <Route key={index} path={`/${button.name}`} element={<VacationReuseable name={button.name}></VacationReuseable>}></Route>
+        {trips.map((trip, index) => (
+          <Route key={index} path={`/${trip.name}`} element={<VacationReuseable name={trip.name}
+            trips={trips}
+            vacation={trips[index]}
+            index={index}
+            setTrips={setTrips}
+          />} />
         ))}
 
+
+
+
+
       </Routes>
-    </BrowserRouter>
-      
+    </BrowserRouter >
+
   )
 }
 
