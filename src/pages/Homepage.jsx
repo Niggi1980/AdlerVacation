@@ -4,11 +4,10 @@ import "../css/homepage.css"
 import AddButton from '../components/AddButton';
 import Popup from '../components/Popup';
 
-export default function homepage() {
-  const [buttons, setButtons] = useState(["Japan", "Deutschland"]);
+export default function homepage({buttons, setButtons}) {
   const [showPopup, setShowPopup] = useState(false);
 
-  function toggleAdd(){
+  function toggleAddContainer(){
     setShowPopup(!showPopup)
   }
 
@@ -16,7 +15,7 @@ export default function homepage() {
     if(!name){return}
 
     setButtons([...buttons, name])
-    toggleAdd()
+    toggleAddContainer()
   }
 
 
@@ -24,11 +23,11 @@ export default function homepage() {
     <div className='homepageContainer'>
       <h1 style={{marginBottom:"40px"}}>Adler Vacation</h1>
       {buttons.map((button, index)=>(
-        <BigHolder headline={button}></BigHolder>
+        <BigHolder key={index} headline={button}></BigHolder>
       ))}
       {showPopup && (<Popup handleFunction={addVacation}></Popup>)}
 
-      <AddButton handleFunction={toggleAdd}></AddButton>
+      <AddButton handleFunction={toggleAddContainer}></AddButton>
 
       
     </div>
