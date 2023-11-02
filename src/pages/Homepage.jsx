@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import BigHolder from '../components/BigHolder'
 import "../css/homepage.css"
 import Popup from '../components/Popup';
-import PopUpModal from '../components/popUpModal';
 import ModalAddButton from '../components/ModalAddButton';
 
 export default function homepage({trips, setTrips}) {

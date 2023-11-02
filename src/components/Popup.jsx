@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "../css/popup.css"
 import FloatingInput from './FloatingInput';
-import PopUpModal from './popUpModal';
 
 export default function Popup({ handleFunction, placeholder }) {
   const [vacationName, setVacationName] = useState();
