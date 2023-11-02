@@ -1,8 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import TestComp from './components/TestComp.jsx'
 import PopupComp from "./components/PopupComp.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from './pages/homepage'

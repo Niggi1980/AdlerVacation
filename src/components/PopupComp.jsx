@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import "../css/popup.css"
-import TestComp from './TestComp';
 import { useNavigate } from 'react-router-dom';
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <TestComp></TestComp>
+      
       <button onClick={openPopup}>+</button>
       {showPopup && (
         <div className="popupCustom">
