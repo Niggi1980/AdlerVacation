@@ -27,7 +27,7 @@ export default function ModalAddButton({ handleFunction, title, placeholder }) {
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
-                            <button onClick={() => handleFunction(vacationName)} type="button" className="btn btn-primary">Hinzufügen</button>
+                            <button onClick={() => handleFunction(vacationName)} type="button" className="btn btn-primary" data-bs-dismiss="modal" >Hinzufügen </button>
                         </div>
                     </div>
                 </div>

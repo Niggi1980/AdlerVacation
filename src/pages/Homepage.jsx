@@ -32,7 +32,7 @@ export default function homepage({trips, setTrips}) {
         <BigHolder key={index} headline={trip.name} urlPath={trip.name}></BigHolder>
       ))}
     
-      <ModalAddButton title="Put in Destination" handleFunction={addVacation} placeholder={"Destination"}></ModalAddButton>
+      <ModalAddButton title="Reiseziel eingeben" handleFunction={addVacation} placeholder={"Reiseziel"}></ModalAddButton>
 
     </div>
   )

@@ -54,7 +54,7 @@ export default function VacationReuseable({ name, vacation, trips, setTrips, ind
         <h1 className='headline mb-4'>{name}</h1>
       </div>
 
-      <ModalAddButton title="Put in Day Title" handleFunction={addVacationDay} placeholder={"Day Title"}></ModalAddButton>
+      <ModalAddButton title="Tagestrip eingeben" handleFunction={addVacationDay} placeholder={"Tagestrip"}></ModalAddButton>
 
       {vacation.days.map((day, index)=>(
         <BigHolder key={index} headline={day.name} urlPath={`${vacation.name}/${day.name}`}></BigHolder>
